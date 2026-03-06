@@ -106,7 +106,7 @@ def write_to_hbase_partition(partition):
     connection = happybase.Connection('master')
     connection.open()
 
-    table = connection.table('supply_chain_ml_data')
+    table = connection.table('supply_chain_ml_analytics')
 
     for row in partition:
         row_key, column, value = row
